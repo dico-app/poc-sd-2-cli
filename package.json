@@ -12,9 +12,12 @@
   },
   "license": "MIT",
   "author": "Lucie Haberer <hello@lihbr.com> (https://lihbr.com)",
-  "bin": "bin/dico.js",
+  "bin": {
+    "dico": "bin/dico.js"
+  },
   "files": [
-    "bin"
+    "bin",
+    "postinstall.js"
   ],
   "engines": {
     "node": ">=12.18.0",
@@ -29,7 +32,8 @@
     "lint": "eslint --ext .js,.ts,.vue .",
     "release": "yarn build && yarn test && standard-version && git push --follow-tags && npm publish",
     "release:alpha": "yarn test && standard-version --release-as patch --prerelease && git push --follow-tags && npm publish --tag alpha",
-    "test": "yarn lint && jest"
+    "test": "yarn lint && jest",
+    "postinstall": "node postinstall.js"
   },
   "husky": {
     "hooks": {

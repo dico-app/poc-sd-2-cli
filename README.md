@@ -12,10 +12,10 @@
 
 ## Setup
 
-1. Install `dico-cli` globally
+1. Install `@dico/cli` globally
 
 ```bash
-yarn global add dico-cli # or npm install --global dico-cli
+yarn global add @dico/cli # or npm install --global @dico/cli
 ```
 
 2. Browse available commands
