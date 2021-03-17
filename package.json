@@ -29,7 +29,6 @@
     "lint": "eslint --ext .js,.ts,.vue .",
     "release": "yarn build && yarn test && standard-version && git push --follow-tags && npm publish",
     "release:alpha": "yarn test && standard-version --release-as patch --prerelease && git push --follow-tags && npm publish --tag alpha",
-    "release:dry": "standard-version --release-as patch --prerelease",
     "test": "yarn lint && jest"
   },
   "husky": {
