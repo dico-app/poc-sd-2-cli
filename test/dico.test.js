@@ -1,4 +1,4 @@
-describe("module", () => {
+describe("dico", () => {
   test("integration", () => {
     const worksOnMyComputer = true;
 
