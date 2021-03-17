@@ -1,6 +1,6 @@
 {
   "name": "@dico/cli",
-  "version": "0.0.1-1",
+  "version": "0.0.1-2",
   "description": "Dico.app Command Line Interface",
   "keywords": [
     "dico",
@@ -19,19 +19,12 @@
     "bin",
     "postinstall.js"
   ],
-  "engines": {
-    "node": ">=12.18.0",
-    "yarn": ">=1.22.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
     "build": "siroc build",
     "dev": "siroc build && node bin/dico",
     "lint": "eslint --ext .js,.ts,.vue .",
     "release": "yarn build && yarn test && standard-version && git push --follow-tags && npm publish",
-    "release:alpha": "yarn test && standard-version --release-as patch --prerelease && git push --follow-tags && npm publish --tag alpha",
+    "release:alpha": "yarn build && yarn test && standard-version --release-as patch --prerelease && git push --follow-tags && npm publish --tag alpha",
     "test": "yarn lint && jest",
     "postinstall": "node postinstall.js"
   },
@@ -78,5 +71,12 @@
     "prettier": "2.2.1",
     "siroc": "0.8.0",
     "standard-version": "9.1.1"
+  },
+  "engines": {
+    "node": ">=12.18.0",
+    "yarn": ">=1.22.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
