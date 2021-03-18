@@ -5,7 +5,8 @@ import JSONC from "comment-json";
 interface DicoConfigOptions {}
 
 enum Code {
-  DicoAlreadyExists = "dico.config.jsonc already exists"
+  DicoAlreadyExists = "dico.config.jsonc already exists",
+  DicoNotFound = "dico.config.jsonc not found"
 }
 
 export class DicoConfig {
