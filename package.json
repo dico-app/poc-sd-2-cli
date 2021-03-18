@@ -23,8 +23,8 @@
     "build": "siroc build",
     "dev": "siroc build && node bin/dico",
     "lint": "eslint --ext .js,.ts,.vue .",
-    "release": "yarn build && yarn test && standard-version && git push --follow-tags && npm publish",
-    "release:alpha": "yarn build && yarn test && standard-version --release-as patch --prerelease && git push --follow-tags && npm publish --tag alpha",
+    "release": "yarn build && yarn test && standard-version && git push --follow-tags && yarn build && npm publish",
+    "release:alpha": "yarn build && yarn test && standard-version --release-as patch --prerelease && git push --follow-tags && yarn build && npm publish --tag alpha",
     "test": "yarn lint && jest",
     "postinstall": "node postinstall.js"
   },

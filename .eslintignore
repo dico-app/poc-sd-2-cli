@@ -4,6 +4,7 @@
 dist
 bin
 docs/static/sw.js
+dico.config.jsonc
 
 # Created by https://www.toptal.com/developers/gitignore/api/nuxt,node,yarn,vuejs,macos,linux,dotenv,windows,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=nuxt,node,yarn,vuejs,macos,linux,dotenv,windows,visualstudiocode
