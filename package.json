@@ -13,7 +13,7 @@
   "license": "MIT",
   "author": "Lucie Haberer <hello@lihbr.com> (https://lihbr.com)",
   "bin": {
-    "dico": "bin/dico.js"
+    "dico": "bin/cli.js"
   },
   "files": [
     "bin",
@@ -21,7 +21,7 @@
   ],
   "scripts": {
     "build": "siroc build",
-    "dev": "siroc build && node bin/dico",
+    "dev": "siroc build --watch",
     "lint": "eslint --ext .js,.ts,.vue .",
     "release": "yarn build && yarn test && standard-version && git push --follow-tags && yarn build && npm publish",
     "release:alpha": "yarn build && yarn test && standard-version --release-as patch --prerelease && git push --follow-tags && yarn build && npm publish --tag alpha",
